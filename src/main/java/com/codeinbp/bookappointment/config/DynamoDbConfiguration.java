@@ -33,8 +33,8 @@ public class DynamoDbConfiguration {
                   .withCredentials(
                           new AWSStaticCredentialsProvider(
                                   new BasicAWSCredentials(
-                                          "yourAccessKey",
-                                          "yourSecretKey"
+                                          AwsConfig.AWS_ACCESS_KEY,
+                                          AwsConfig.AWS_SECRET_KEY
                                   )
                           )
                   )
