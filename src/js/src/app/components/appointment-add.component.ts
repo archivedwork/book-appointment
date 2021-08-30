@@ -9,13 +9,13 @@ import { Router } from "@angular/router";
     selector: 'app-component-add',
     template: `
         <div>
-            <h2>Book an appointment</h2>
             <button class="btn btn-success" (click)=redirectMeTo()>goto appointments</button>
-            <p>form to ask user to enter his name, email address, data of birth, mobile number, appointment date and time then submit button</p>
+            <!--<p>form to ask user to enter his name, email address, data of birth, mobile number, appointment date and time then submit button</p>
             <p>navigate to, appointment schedualed successfully, a code has been send to your emaill address, please save the code.</p>
-            <p>To cancel the appointment, click here and enter the code</p>
+            <p>To cancel the appointment, click here and enter the code</p>-->
 
-            <div class="container-fluid">
+            <div class="container">
+                <h2>Book an appointment</h2>
 
                 <form [formGroup]="appointmentForm">
                     <div class="row">
@@ -25,7 +25,8 @@ import { Router } from "@angular/router";
                                 <input type="text" name="first_name" id="first-name" formControlName="firstName"/>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <div class="form-group row">
                                 <label>Last Name</label>
@@ -42,7 +43,8 @@ import { Router } from "@angular/router";
                                 <input type="email" name="email" id="email"  formControlName="email"/>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <div class="form-group row">
                                 <label>Date of Birth</label>
@@ -52,7 +54,7 @@ import { Router } from "@angular/router";
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col">
                             <div class="form-group row">
                                 <label>Mobile Number</label>
                                 <input type="text" name="mobile_number" id="mobile"  formControlName="mobile"/>
@@ -77,7 +79,11 @@ import { Router } from "@angular/router";
                             </div>
                         </div>
                     </div>-->
-                    <button class="btn btn-primary" (click)=onSubmit() >Submit</button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" (click)=onSubmit() >Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
